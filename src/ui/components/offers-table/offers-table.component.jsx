@@ -1,5 +1,5 @@
 import { useMemo } from "react";
-import { useTable, u } from "react-table";
+import { useTable, useSortBy } from "react-table";
 import { COLUMNS } from "./columns";
 import "./offers-table.styles.scss";
 
@@ -18,21 +18,29 @@ export default function OffersTable({ offers, ...props }) {
     } = useTable({
         columns,
         data,
-    });
+    }, useSortBy);
 
     return (
+        <div>
         <table {...getTableProps()} class="wp-table">
-            <thead>
-                {headerGroups.map(headerGroup => (
-                    <tr {...headerGroup.getHeaderGroupProps()}>
-                        {headerGroup.headers.map(column => (
-                            <th {...column.getHeaderProps()}>
-                                {column.render("Header")}
-                            </th>
-                        ))}
-                    </tr>
-                ))}
-            </thead>
+        <thead>
+          {headerGroups.map(headerGroup => (
+            <tr {...headerGroup.getHeaderGroupProps()}>
+              {headerGroup.headers.map(column => (
+                <th {...column.getHeaderProps(column.getSortByToggleProps())}>
+                  {column.render('Header')}
+                  <span>
+                    {column.isSorted
+                      ? column.isSortedDesc
+                        ? '∇'
+                        : '∆'
+                      : ''}
+                  </span>
+                </th>
+              ))}
+            </tr>
+          ))}
+        </thead>
             <tbody {...getTableBodyProps()}>
                 {rows.map((row, i) => {
                     prepareRow(row);
@@ -50,5 +58,7 @@ export default function OffersTable({ offers, ...props }) {
                 })}
             </tbody>
         </table>
+        </div>
+        
     );
 }
