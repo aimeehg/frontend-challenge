@@ -19,6 +19,7 @@
     "license": "ISC",
     "dependencies": {
         "@babel/runtime": "^7.10.1",
+        "axios": "^0.21.1",
         "babel-plugin-auto-import": "^1.0.5",
         "eslint-config-standard-jsx": "^8.1.0",
         "loglevel": "^1.6.8",
@@ -29,6 +30,8 @@
         "preval.macro": "^5.0.0",
         "react": "^16.13.1",
         "react-dom": "^16.13.1",
+        "react-paginate": "^7.1.2",
+        "react-table": "^7.7.0",
         "recharts": "^1.8.5",
         "stylelint-scss": "^3.17.1"
     },
@@ -68,6 +71,7 @@
         "parcel-plugin-less-js-enabled": "^1.0.2",
         "prettier": "^2.0.5",
         "pretty-quick": "^2.0.1",
+        "sass": "^1.32.13",
         "stylelint": "^13.3.3",
         "stylelint-config-rational-order": "^0.1.2",
         "stylelint-config-recommended": "^3.0.0",
