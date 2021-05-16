@@ -4,6 +4,28 @@
 
 > Little coding challenge for our hiring process.
 > Involves React components and API integration tasks.
+## Solución a la prueba front-end 	:computer:
+¡Hola team de Reworth! :smile:
+
+Esta es mi solución al challenge de front-end,
+
+Para resolverlo utilicé las siguientes dependencias:
+
+-   axios, para hacer el request a la API, preferí utilizar axios por sus principales características que ofrece: poder usar async, await, mejor manejo de errores, y código más legible.
+
+-   react-table, que usa hooks para poder crear tablas y tener control completo de su renderización. Además que tiene funciones para ordenar la tabla. 
+
+-   react-paginate, para controlar la paginación de la tabla con cada página que se recibe de la API.
+
+En general hay dos componentes: 
+
+-   DirectoryList, en este componente principal se renderiza el componente OffersTable y la paginación.
+
+-   OffersTable, es el componente que renderiza la lista de offers.
+
+Utilizo useEffect que se ejecuta cada vez para renderizar el componente OffersTable y useState, para acceder al estado de la lista de offers y loading, para la espera mientras se obtienen los datos de la API. 
+
+Sólo usé CSS en los estilos porque son pocos elementos y para que fuese más rápido de cargarlos en la página.
 
 ## Getting started
 
