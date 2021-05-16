@@ -11,17 +11,17 @@ Esta es mi solución al challenge de front-end,
 
 Para resolverlo utilicé las siguientes dependencias:
 
--   axios, para hacer el request a la API, preferí utilizar axios por sus principales características que ofrece: poder usar async, await, mejor manejo de errores, y código más legible.
+-   **axios**, para hacer el request a la API, preferí utilizar axios por sus principales características que ofrece: poder usar async, await, mejor manejo de errores, y código más legible.
 
--   react-table, que usa hooks para poder crear tablas y tener control completo de su renderización. Además que tiene funciones para ordenar la tabla. 
+-   **react-table**, que usa hooks para poder crear tablas y tener control completo de su renderización. Usé la función useSortBy para ordenar las columnas de la tabla, haciendo click al header de cada columna.
 
--   react-paginate, para controlar la paginación de la tabla con cada página que se recibe de la API.
+-   **react-paginate**, para controlar la paginación de la tabla con cada página que se recibe de la API.
 
 En general hay dos componentes: 
 
--   DirectoryList, en este componente principal se renderiza el componente OffersTable y la paginación.
+-   **DirectoryList**, en este componente principal se renderiza el componente OffersTable y la paginación.
 
--   OffersTable, es el componente que renderiza la lista de offers.
+-   **OffersTable**, es el componente que renderiza la lista de offers.
 
 Utilizo useEffect que se ejecuta cada vez para renderizar el componente OffersTable y useState, para acceder al estado de la lista de offers y loading, para la espera mientras se obtienen los datos de la API. 
 
